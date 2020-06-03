@@ -7,15 +7,21 @@
     <title>BMI Calculator</title>
 </head>
 <body>
-    <header></header>
+    <header>
+        <h3 id="title">
+            BMI Calculator
+        </h3>
+    </header>
     <main>
-        Figure out your BMI in seconds!
+        <h3 id="main-label">Figure out your BMI in seconds!</h3>
 
         <form action="#" method="get">
             <input type="number" placeholder="Height in centimeters" name="height">
             <input type="number" placeholder="Weight in kilograms" name="weight">
-            <input type="submit" value="">
+            <input type="submit" value="Submit">
         </form>
+
+        <h5>{{ bmi ?? 'Complete above field!'}}</h5>
     </main>
     <footer></footer>
 </body>
