@@ -13,7 +13,8 @@ body {
 
 header {
     padding: 3rem 0;
-    background: #6ff9ff;
+    background: #303f9f;
+    color: #ffffff;
 }
 
 main {
@@ -25,15 +26,47 @@ main #main-label {
     padding: 2rem 0;
 }
 
+main .box {
+    padding: 4rem 0;
+    width: 50%;
+    background: #cfd8dc;
+    border: #cfd8dc 1px solid;
+    border-radius: 1rem;
+}
+
 main .input {
-    padding: 0.3rem 0;
+    padding: 0.5rem 0 0.5rem 1.5rem;
+    margin: 0.5rem auto;
+    width: 80%;
+    border-radius: 1rem;
+    border: #cfd8dc 1px solid;
+}
+
+main .input:focus {
+    outline: 0 !important;
+    border: #6f79a8 1px solid;
+}
+
+main .input:active {
+    border-radius: 1rem;
+    border: #d1d9ff 1px solid;
+}
+
+main #submit-button {
+    width: 40%;
+    background: #d1d9ff;
+    padding: 1rem 0;
+    margin: 1rem 0 0;
+    border: 0px solid #fff;
+    font-family: 'Sawarabi Gothic', sans-serif;
+    border-radius: 1rem;
 }
 
 main #result {
     padding: 2rem 0;
     margin: 2rem auto 0;
     width: 40%;
-    border: #0095a8 solid 1px;
+    border: #6f79a8 solid 2px;
 }
 
 #bmi, #description {
@@ -43,5 +76,11 @@ main #result {
 
 footer {
     padding: 4rem 0;
-    background: #26c6da;
+    background: #001970;
+    color: #ffffff;
+}
+
+footer a {
+    color: #ffffff;
+    text-decoration: none;
 }

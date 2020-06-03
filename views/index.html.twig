@@ -16,9 +16,11 @@
         <h3 id="main-label">Figure out your BMI in seconds!</h3>
 
         <form action="#" method="get">
-            <input type="number" placeholder="Height in centimeters" name="height" id="height" class="input">
-            <input type="number" placeholder="Weight in kilograms" name="weight" id="weight" class="input">
-            <input type="submit" value="Submit" id="submit-button">
+            <div class="box">
+                <input type="number" placeholder="Height in centimeters" name="height" id="height" class="input">
+                <input type="number" placeholder="Weight in kilograms" name="weight" id="weight" class="input">
+                <input type="submit" value="Submit" id="submit-button">
+            </div>
         </form>
         <div id="result">
             <h5 id="bmi">{{ bmi ?? 'Complete above field!'}}</h5>
