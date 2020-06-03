@@ -9,9 +9,11 @@ $weight = $_GET['weight'] ?? null;
 $calculator = new BMI($height, $weight);
 
 $bmi = $calculator->getBMI();
+$description = $calculator->getBMIDescription($bmi);
 
 $viewVars = [
-    'bmi' => $bmi
+    'bmi' => $bmi,
+    'description' => $description
 ];
 
 echo $twig->render('index.html.twig', $viewVars);
