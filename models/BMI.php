@@ -5,10 +5,24 @@ class BMI
     protected $height;
     protected $weight;
 
-    public function __construct(int $height = null, int $weight = null)
+    public function __construct($height = null, $weight = null)
     {
         $this->height = $height;
         $this->weight = $weight;
+    }
+
+    private function isValid($value = null) {
+
+        if (null === $value) {
+            return false;
+        }
+
+        if (abs(floatval($value)) <= 0 || !is_numeric($value)) {
+            $_COOKIE['error'] = "Enter correct values!";
+            return false;
+        }
+
+        return true;
     }
 
     public function getBMI() : ?float {
@@ -16,7 +30,7 @@ class BMI
         $weight = $this->weight;
         $height = $this->height;
         
-        if ($height === null || $weight === null) {
+        if (!$this->isValid($height) || !$this->isValid($weight)) {
             return null;
         }
 

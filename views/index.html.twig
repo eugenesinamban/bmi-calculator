@@ -4,27 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/993416add2.js" crossorigin="anonymous"></script>
     <title>BMI Calculator</title>
 </head>
 <body>
     <header>
         <h3 id="title">
-            BMI Calculator
+            <a href="/codejunkie21/bmi/">BMI Calculator</a>
         </h3>
     </header>
     <main>
         <h3 id="main-label">Figure out your BMI in seconds!</h3>
 
+        <h5 class="error">{{ error }}</h5>
+
         <form action="#" method="get">
             <div class="box">
-                <input type="number" placeholder="Height in centimeters" name="height" id="height" class="input">
-                <input type="number" placeholder="Weight in kilograms" name="weight" id="weight" class="input">
+                <input type="text" placeholder="Height in centimeters" name="height" id="height" class="input">
+                <input type="text" placeholder="Weight in kilograms" name="weight" id="weight" class="input">
                 <input type="submit" value="Submit" id="submit-button">
             </div>
         </form>
         <div id="result">
-            <h5 id="bmi">{{ bmi ?? 'Complete above field!'}}</h5>
-            <h5 id="description">{{ description }}</h5>
+            <h5 id="bmi">{{ bmi ? "Your BMI is " ~ bmi : 'Complete above field!' |e }}</h5>
+            <h5 id="description">{{ description |e }}</h5>
         </div>
     </main>
     {% include "./includes/footer.twig" %}

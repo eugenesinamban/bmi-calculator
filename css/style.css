@@ -15,6 +15,15 @@ header {
     padding: 3rem 0;
     background: #303f9f;
     color: #ffffff;
+    border: #303f9f 1px solid;
+    position: relative;
+    z-index: 10;
+    box-shadow: 0 1px 3px #212121;
+}
+
+header a {
+    text-decoration: none;
+    color: #ffffff;
 }
 
 main {
@@ -26,12 +35,22 @@ main #main-label {
     padding: 2rem 0;
 }
 
+main .error {
+    color: #ef5350;
+}
+
 main .box {
     padding: 4rem 0;
-    width: 50%;
+    width: 30%;
     background: #cfd8dc;
     border: #cfd8dc 1px solid;
     border-radius: 1rem;
+}
+
+@media only screen and (max-width: 768px) {
+    main .box {
+        width: 80%;
+  }
 }
 
 main .input {
@@ -54,7 +73,7 @@ main .input:active {
 
 main #submit-button {
     width: 40%;
-    background: #d1d9ff;
+    background: #6f79a8;
     padding: 1rem 0;
     margin: 1rem 0 0;
     border: 0px solid #fff;

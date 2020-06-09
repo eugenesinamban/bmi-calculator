@@ -10,10 +10,13 @@ $calculator = new BMI($height, $weight);
 
 $bmi = $calculator->getBMI();
 $description = $calculator->getBMIDescription($bmi);
+$error = $_COOKIE['error'] ?? null;
 
 $viewVars = [
     'bmi' => $bmi,
-    'description' => $description
+    'description' => $description,
+    'error' => $error
 ];
 
 echo $twig->render('index.html.twig', $viewVars);
+$_COOKIE['error'] = '';
